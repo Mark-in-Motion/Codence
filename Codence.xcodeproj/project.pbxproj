@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000101 /* AppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000201 /* AppBootstrap.swift */; };
+		A00000000000000000000102 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000202 /* AppState.swift */; };
+		A00000000000000000000103 /* CodenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000203 /* CodenceApp.swift */; };
+		A00000000000000000000104 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000204 /* DependencyContainer.swift */; };
+		A00000000000000000000105 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000205 /* SyncCoordinator.swift */; };
+		A00000000000000000000106 /* UsageSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000206 /* UsageSnapshot.swift */; };
+		A00000000000000000000107 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000207 /* AuthState.swift */; };
+		A00000000000000000000108 /* FetchDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000208 /* FetchDiagnostics.swift */; };
+		A00000000000000000000109 /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000209 /* FetchError.swift */; };
+		A0000000000000000000010A /* SyncStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020A /* SyncStatus.swift */; };
+		A0000000000000000000010B /* CodexAccountActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020B /* CodexAccountActivity.swift */; };
+		A0000000000000000000010C /* DiagnosticsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020C /* DiagnosticsRepository.swift */; };
+		A0000000000000000000010D /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020D /* SettingsRepository.swift */; };
+		A0000000000000000000010E /* UsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020E /* UsageHistoryStore.swift */; };
+		A0000000000000000000010F /* UsageSnapshotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020F /* UsageSnapshotRepository.swift */; };
+		A00000000000000000000110 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000210 /* NotificationService.swift */; };
+		A00000000000000000000111 /* CodexAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000211 /* CodexAccountService.swift */; };
+		A00000000000000000000112 /* PaceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000212 /* PaceEngine.swift */; };
+		A00000000000000000000113 /* CodexAppServerServing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000213 /* CodexAppServerServing.swift */; };
+		A00000000000000000000114 /* UsageFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000214 /* UsageFetchService.swift */; };
+		A00000000000000000000115 /* MenuBarRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000215 /* MenuBarRootView.swift */; };
+		A00000000000000000000116 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000216 /* SettingsView.swift */; };
+		A00000000000000000000117 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000218 /* AppSettings.swift */; };
+		A00000000000000000000118 /* UsageHistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000219 /* UsageHistoryEntry.swift */; };
+		A00000000000000000000119 /* PaceMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021A /* PaceMetrics.swift */; };
+		A0000000000000000000011A /* PaceRiskLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021B /* PaceRiskLevel.swift */; };
+		A0000000000000000000011B /* FileBackedUsageSnapshotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021C /* FileBackedUsageSnapshotRepository.swift */; };
+		A0000000000000000000011C /* AccountActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021D /* AccountActivityRepository.swift */; };
+		A0000000000000000000011D /* FileBackedSettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021E /* FileBackedSettingsRepository.swift */; };
+		A0000000000000000000011E /* FileBackedDiagnosticsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021F /* FileBackedDiagnosticsRepository.swift */; };
+		A00000000000000000000120 /* CodexAppServerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000220 /* CodexAppServerModels.swift */; };
+		A00000000000000000000121 /* CodexAppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000221 /* CodexAppServerClient.swift */; };
+		A00000000000000000000122 /* CodexUsageFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000222 /* CodexUsageFetchService.swift */; };
+		A00000000000000000000123 /* CodenceMarkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000223 /* CodenceMarkIcon.swift */; };
+		A00000000000000000000124 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000224 /* Icons */; };
+		A00000000000000000000125 /* LaunchAtLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000225 /* LaunchAtLoginController.swift */; };
+		A00000000000000000000126 /* CodexExecutableLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000226 /* CodexExecutableLocator.swift */; };
+		A00000000000000000000127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000227 /* Assets.xcassets */; };
+		A00000000000000000000128 /* RecommendationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000228 /* RecommendationState.swift */; };
+		A00000000000000000000129 /* DefaultPaceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000229 /* DefaultPaceEngine.swift */; };
+		A0000000000000000000012A /* DefaultRecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022A /* DefaultRecommendationEngine.swift */; };
+		A0000000000000000000012B /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022B /* RecommendationEngine.swift */; };
+		A0000000000000000000012C /* DebugReportBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022C /* DebugReportBuilder.swift */; };
+		A0000000000000000000012D /* DiagnosticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022D /* DiagnosticsPresenter.swift */; };
+		A0000000000000000000012E /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022E /* EventLogger.swift */; };
+		A0000000000000000000012F /* FileBackedUsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022F /* FileBackedUsageHistoryStore.swift */; };
+		A00000000000000000000130 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000230 /* DashboardView.swift */; };
+		A00000000000000000000131 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000231 /* DiagnosticsView.swift */; };
+		A00000000000000000000132 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000232 /* SetupView.swift */; };
+		A00000000000000000000133 /* BackoffPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000233 /* BackoffPolicy.swift */; };
+		A00000000000000000000134 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000234 /* Formatting.swift */; };
+		A00000000000000000000135 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000235 /* TimeProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000000000000000000001 /* Codence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000201 /* AppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBootstrap.swift; sourceTree = "<group>"; };
+		A00000000000000000000202 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A00000000000000000000203 /* CodenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodenceApp.swift; sourceTree = "<group>"; };
+		A00000000000000000000204 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		A00000000000000000000205 /* SyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCoordinator.swift; sourceTree = "<group>"; };
+		A00000000000000000000206 /* UsageSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSnapshot.swift; sourceTree = "<group>"; };
+		A00000000000000000000207 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		A00000000000000000000208 /* FetchDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDiagnostics.swift; sourceTree = "<group>"; };
+		A00000000000000000000209 /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		A0000000000000000000020A /* SyncStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatus.swift; sourceTree = "<group>"; };
+		A0000000000000000000020B /* CodexAccountActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAccountActivity.swift; sourceTree = "<group>"; };
+		A0000000000000000000020C /* DiagnosticsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsRepository.swift; sourceTree = "<group>"; };
+		A0000000000000000000020D /* SettingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepository.swift; sourceTree = "<group>"; };
+		A0000000000000000000020E /* UsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryStore.swift; sourceTree = "<group>"; };
+		A0000000000000000000020F /* UsageSnapshotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSnapshotRepository.swift; sourceTree = "<group>"; };
+		A00000000000000000000210 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A00000000000000000000211 /* CodexAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAccountService.swift; sourceTree = "<group>"; };
+		A00000000000000000000212 /* PaceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceEngine.swift; sourceTree = "<group>"; };
+		A00000000000000000000213 /* CodexAppServerServing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAppServerServing.swift; sourceTree = "<group>"; };
+		A00000000000000000000214 /* UsageFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageFetchService.swift; sourceTree = "<group>"; };
+		A00000000000000000000215 /* MenuBarRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarRootView.swift; sourceTree = "<group>"; };
+		A00000000000000000000216 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00000000000000000000218 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		A00000000000000000000219 /* UsageHistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistoryEntry.swift; sourceTree = "<group>"; };
+		A0000000000000000000021A /* PaceMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceMetrics.swift; sourceTree = "<group>"; };
+		A0000000000000000000021B /* PaceRiskLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceRiskLevel.swift; sourceTree = "<group>"; };
+		A0000000000000000000021C /* FileBackedUsageSnapshotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBackedUsageSnapshotRepository.swift; sourceTree = "<group>"; };
+		A0000000000000000000021D /* AccountActivityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityRepository.swift; sourceTree = "<group>"; };
+		A0000000000000000000021E /* FileBackedSettingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBackedSettingsRepository.swift; sourceTree = "<group>"; };
+		A0000000000000000000021F /* FileBackedDiagnosticsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBackedDiagnosticsRepository.swift; sourceTree = "<group>"; };
+		A00000000000000000000220 /* CodexAppServerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAppServerModels.swift; sourceTree = "<group>"; };
+		A00000000000000000000221 /* CodexAppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAppServerClient.swift; sourceTree = "<group>"; };
+		A00000000000000000000222 /* CodexUsageFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexUsageFetchService.swift; sourceTree = "<group>"; };
+		A00000000000000000000223 /* CodenceMarkIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodenceMarkIcon.swift; sourceTree = "<group>"; };
+		A00000000000000000000224 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		A00000000000000000000225 /* LaunchAtLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginController.swift; sourceTree = "<group>"; };
+		A00000000000000000000226 /* CodexExecutableLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexExecutableLocator.swift; sourceTree = "<group>"; };
+		A00000000000000000000227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A00000000000000000000228 /* RecommendationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationState.swift; sourceTree = "<group>"; };
+		A00000000000000000000229 /* DefaultPaceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPaceEngine.swift; sourceTree = "<group>"; };
+		A0000000000000000000022A /* DefaultRecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRecommendationEngine.swift; sourceTree = "<group>"; };
+		A0000000000000000000022B /* RecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationEngine.swift; sourceTree = "<group>"; };
+		A0000000000000000000022C /* DebugReportBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugReportBuilder.swift; sourceTree = "<group>"; };
+		A0000000000000000000022D /* DiagnosticsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsPresenter.swift; sourceTree = "<group>"; };
+		A0000000000000000000022E /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
+		A0000000000000000000022F /* FileBackedUsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBackedUsageHistoryStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000230 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		A00000000000000000000231 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000232 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		A00000000000000000000233 /* BackoffPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackoffPolicy.swift; sourceTree = "<group>"; };
+		A00000000000000000000234 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		A00000000000000000000235 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000000000000000000014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000003 /* Codence */,
+				A00000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00000000000000000000003 /* Codence */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000005 /* App */,
+				A00000000000000000000021 /* Diagnostics */,
+				A00000000000000000000006 /* Models */,
+				A00000000000000000000007 /* Repositories */,
+				A00000000000000000000008 /* Services */,
+				A00000000000000000000009 /* UI */,
+				A00000000000000000000022 /* Utilities */,
+				A0000000000000000000000A /* Resources */,
+			);
+			name = Codence;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000001 /* Codence.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000005 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000201 /* AppBootstrap.swift */,
+				A00000000000000000000202 /* AppState.swift */,
+				A00000000000000000000203 /* CodenceApp.swift */,
+				A00000000000000000000204 /* DependencyContainer.swift */,
+				A00000000000000000000205 /* SyncCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000006 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000020 /* Pacing */,
+				A0000000000000000000000F /* Settings */,
+				A0000000000000000000000B /* Sync */,
+				A0000000000000000000000C /* Usage */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000007 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000020B /* CodexAccountActivity.swift */,
+				A0000000000000000000020C /* DiagnosticsRepository.swift */,
+				A0000000000000000000021F /* FileBackedDiagnosticsRepository.swift */,
+				A0000000000000000000021E /* FileBackedSettingsRepository.swift */,
+				A0000000000000000000022F /* FileBackedUsageHistoryStore.swift */,
+				A0000000000000000000021C /* FileBackedUsageSnapshotRepository.swift */,
+				A0000000000000000000021D /* AccountActivityRepository.swift */,
+				A0000000000000000000020D /* SettingsRepository.swift */,
+				A0000000000000000000020E /* UsageHistoryStore.swift */,
+				A0000000000000000000020F /* UsageSnapshotRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000008 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000221 /* CodexAppServerClient.swift */,
+				A00000000000000000000226 /* CodexExecutableLocator.swift */,
+				A00000000000000000000220 /* CodexAppServerModels.swift */,
+				A00000000000000000000222 /* CodexUsageFetchService.swift */,
+				A00000000000000000000229 /* DefaultPaceEngine.swift */,
+				A0000000000000000000022A /* DefaultRecommendationEngine.swift */,
+				A00000000000000000000225 /* LaunchAtLoginController.swift */,
+				A00000000000000000000210 /* NotificationService.swift */,
+				A00000000000000000000211 /* CodexAccountService.swift */,
+				A00000000000000000000212 /* PaceEngine.swift */,
+				A0000000000000000000022B /* RecommendationEngine.swift */,
+				A00000000000000000000213 /* CodexAppServerServing.swift */,
+				A00000000000000000000214 /* UsageFetchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000009 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000223 /* CodenceMarkIcon.swift */,
+				A00000000000000000000023 /* Dashboard */,
+				A00000000000000000000024 /* Diagnostics */,
+				A0000000000000000000000D /* MenuBar */,
+				A0000000000000000000000E /* Settings */,
+				A00000000000000000000025 /* Setup */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000217 /* Info.plist */,
+				A00000000000000000000227 /* Assets.xcassets */,
+				A00000000000000000000224 /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000B /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000207 /* AuthState.swift */,
+				A00000000000000000000208 /* FetchDiagnostics.swift */,
+				A00000000000000000000209 /* FetchError.swift */,
+				A0000000000000000000020A /* SyncStatus.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000C /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000219 /* UsageHistoryEntry.swift */,
+				A00000000000000000000206 /* UsageSnapshot.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000D /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000215 /* MenuBarRootView.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000216 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A0000000000000000000000F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000218 /* AppSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000020 /* Pacing */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000021A /* PaceMetrics.swift */,
+				A0000000000000000000021B /* PaceRiskLevel.swift */,
+				A00000000000000000000228 /* RecommendationState.swift */,
+			);
+			path = Pacing;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000021 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000022C /* DebugReportBuilder.swift */,
+				A0000000000000000000022D /* DiagnosticsPresenter.swift */,
+				A0000000000000000000022E /* EventLogger.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000022 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000026 /* BackoffPolicy */,
+				A00000000000000000000027 /* Formatting */,
+				A00000000000000000000028 /* Time */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000023 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000230 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000024 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000231 /* DiagnosticsView.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000025 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000232 /* SetupView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000026 /* BackoffPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000233 /* BackoffPolicy.swift */,
+			);
+			path = BackoffPolicy;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000027 /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000234 /* Formatting.swift */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000028 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000235 /* TimeProvider.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00000000000000000000010 /* Codence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000018 /* Build configuration list for PBXNativeTarget "Codence" */;
+			buildPhases = (
+				A00000000000000000000013 /* Sources */,
+				A00000000000000000000014 /* Frameworks */,
+				A00000000000000000000015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Codence;
+			productName = Codence;
+			productReference = A00000000000000000000001 /* Codence.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000000000000000000011 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					A00000000000000000000010 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A00000000000000000000019 /* Build configuration list for PBXProject "Codence" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00000000000000000000002;
+			productRefGroup = A00000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00000000000000000000010 /* Codence */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000000000000000000015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000127 /* Assets.xcassets in Resources */,
+				A00000000000000000000124 /* Icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000000000000000000013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000101 /* AppBootstrap.swift in Sources */,
+				A00000000000000000000102 /* AppState.swift in Sources */,
+				A00000000000000000000103 /* CodenceApp.swift in Sources */,
+				A00000000000000000000104 /* DependencyContainer.swift in Sources */,
+				A00000000000000000000105 /* SyncCoordinator.swift in Sources */,
+				A00000000000000000000106 /* UsageSnapshot.swift in Sources */,
+				A00000000000000000000107 /* AuthState.swift in Sources */,
+				A00000000000000000000108 /* FetchDiagnostics.swift in Sources */,
+				A00000000000000000000109 /* FetchError.swift in Sources */,
+				A0000000000000000000010A /* SyncStatus.swift in Sources */,
+				A0000000000000000000010B /* CodexAccountActivity.swift in Sources */,
+				A0000000000000000000010C /* DiagnosticsRepository.swift in Sources */,
+				A0000000000000000000010D /* SettingsRepository.swift in Sources */,
+				A0000000000000000000010E /* UsageHistoryStore.swift in Sources */,
+				A0000000000000000000010F /* UsageSnapshotRepository.swift in Sources */,
+				A00000000000000000000110 /* NotificationService.swift in Sources */,
+				A00000000000000000000111 /* CodexAccountService.swift in Sources */,
+				A00000000000000000000112 /* PaceEngine.swift in Sources */,
+				A00000000000000000000113 /* CodexAppServerServing.swift in Sources */,
+				A00000000000000000000114 /* UsageFetchService.swift in Sources */,
+				A00000000000000000000115 /* MenuBarRootView.swift in Sources */,
+				A00000000000000000000116 /* SettingsView.swift in Sources */,
+				A00000000000000000000117 /* AppSettings.swift in Sources */,
+				A00000000000000000000118 /* UsageHistoryEntry.swift in Sources */,
+				A00000000000000000000119 /* PaceMetrics.swift in Sources */,
+				A0000000000000000000011A /* PaceRiskLevel.swift in Sources */,
+				A00000000000000000000128 /* RecommendationState.swift in Sources */,
+				A0000000000000000000011B /* FileBackedUsageSnapshotRepository.swift in Sources */,
+				A0000000000000000000011C /* AccountActivityRepository.swift in Sources */,
+				A0000000000000000000011D /* FileBackedSettingsRepository.swift in Sources */,
+				A0000000000000000000011E /* FileBackedDiagnosticsRepository.swift in Sources */,
+				A00000000000000000000120 /* CodexAppServerModels.swift in Sources */,
+				A00000000000000000000121 /* CodexAppServerClient.swift in Sources */,
+				A00000000000000000000122 /* CodexUsageFetchService.swift in Sources */,
+				A00000000000000000000123 /* CodenceMarkIcon.swift in Sources */,
+				A00000000000000000000125 /* LaunchAtLoginController.swift in Sources */,
+				A00000000000000000000126 /* CodexExecutableLocator.swift in Sources */,
+				A00000000000000000000129 /* DefaultPaceEngine.swift in Sources */,
+				A0000000000000000000012A /* DefaultRecommendationEngine.swift in Sources */,
+				A0000000000000000000012B /* RecommendationEngine.swift in Sources */,
+				A0000000000000000000012C /* DebugReportBuilder.swift in Sources */,
+				A0000000000000000000012D /* DiagnosticsPresenter.swift in Sources */,
+				A0000000000000000000012E /* EventLogger.swift in Sources */,
+				A0000000000000000000012F /* FileBackedUsageHistoryStore.swift in Sources */,
+				A00000000000000000000130 /* DashboardView.swift in Sources */,
+				A00000000000000000000131 /* DiagnosticsView.swift in Sources */,
+				A00000000000000000000132 /* SetupView.swift in Sources */,
+				A00000000000000000000133 /* BackoffPolicy.swift in Sources */,
+				A00000000000000000000134 /* Formatting.swift in Sources */,
+				A00000000000000000000135 /* TimeProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0000000000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0000000000000000000001B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A0000000000000000000001C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codence.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0000000000000000000001D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codence.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000000000000000000018 /* Build configuration list for PBXNativeTarget "Codence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0000000000000000000001C /* Debug */,
+				A0000000000000000000001D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A00000000000000000000019 /* Build configuration list for PBXProject "Codence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0000000000000000000001A /* Debug */,
+				A0000000000000000000001B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00000000000000000000011 /* Project object */;
+}

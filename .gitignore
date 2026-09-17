@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Xcode user data
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Xcode / build products
+DerivedData/
+build/
+
+# Local app/runtime artifacts
+*.log
+dist/
+*.xcarchive
+*.dmg
+
+# Keep local credentials and signing material out of public commits.
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# Temporary files
+*.swp
+*.swo
+*~

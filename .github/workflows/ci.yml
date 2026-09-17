@@ -1,0 +1,24 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check whitespace
+        run: git show --check --oneline HEAD
+      - name: Run Swift tests
+        run: swift test
+      - name: Build Debug app
+        run: xcodebuild -quiet -project Codence.xcodeproj -scheme Codence -configuration Debug -destination 'generic/platform=macOS' -derivedDataPath "$RUNNER_TEMP/codence-debug" CODE_SIGNING_ALLOWED=NO build
+      - name: Build Release app
+        run: xcodebuild -quiet -project Codence.xcodeproj -scheme Codence -configuration Release -destination 'generic/platform=macOS' -derivedDataPath "$RUNNER_TEMP/codence-release" CODE_SIGNING_ALLOWED=NO build
