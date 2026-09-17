@@ -24,13 +24,13 @@ The app stays in the menu bar; it does not open a Dock window. Click its C-shape
 
 ## Install from source
 
-[v0.1.0](https://github.com/Mark-in-Motion/Codence/releases/tag/v0.1.0) is a **source-only pre-release**. There is no signed, notarized app or DMG download. Install by building a local copy with Xcode; do not redistribute that unsigned build as a public download.
+**v0.1.0 is a source-only pre-release.** There is no downloadable `Codence.app` or DMG. Install by building a local copy with Xcode; do not redistribute that unsigned build as a public download.
 
 Downloadable binary distribution is deferred until Apple Developer Program membership and clean-Mac acceptance are complete.
 
 Requirements: macOS 13 or newer, the full Xcode app, and a current Codex CLI installation. [OpenAI's Codex CLI guide](https://learn.chatgpt.com/docs/codex/cli) has the current installation and sign-in instructions. Codence requires **Sign in with ChatGPT** in Codex; API-key-only authentication does not provide ChatGPT subscription quota data to this app.
 
-1. Download this repository from GitHub and open Terminal in the extracted `codence` folder.
+1. Open the [Codence v0.1.0 release](https://github.com/Mark-in-Motion/Codence/releases/tag/v0.1.0). Under **Assets**, download **Source code (zip)**, extract it, and open Terminal in the extracted folder containing `scripts/install-local.sh`. Alternatively, developers can run `git clone https://github.com/Mark-in-Motion/Codence.git` followed by `cd Codence`.
 2. Run `./scripts/install-local.sh`. It builds a Release app and installs it to `~/Applications/Codence.app` without administrator access.
 3. Run `open "$HOME/Applications/Codence.app"`, then click the Codence icon in the menu bar.
 4. If prompted, sign in with ChatGPT. If Codex is installed but not found, choose its executable in Settings → General.

@@ -30,6 +30,7 @@ Codence has been created from the Claudence UI foundation and converted to a Cod
 - Settings → About now links to the README's manual uninstall instructions, which separate app removal from optional local-data removal
 - the README now shows Codence-specific popover and Settings screenshots from `docs/images/`, with a concise feature list; the screenshot documentation gate is complete
 - v0.1.0 is published on GitHub as a source-only pre-release with no app or DMG asset; public repository metadata is set
+- the README now gives the v0.1.0 release's **Assets → Source code (zip)** as the main install path, with `git clone` as a developer alternative
 - the verified Apple account is free and has an Apple Development identity, not a Developer ID Application certificate; normal signed/notarized distribution is deferred until Apple Developer Program membership
 
 ## Open manual gates
