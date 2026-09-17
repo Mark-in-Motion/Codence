@@ -28,6 +28,7 @@ Codence has been created from the Claudence UI foundation and converted to a Cod
 - the local installer created a runnable arm64 `Codence.app` in a temporary install directory, and a second run correctly refused to overwrite it
 - the public source repository is https://github.com/Mark-in-Motion/Codence; a fresh public clone, Release installation with `install-local.sh`, Finder launch, live account connection and refresh, and Launch at Login registration were reported successful on 2026-09-17
 - Settings → About now links to the README's manual uninstall instructions, which separate app removal from optional local-data removal
+- the README now shows Codence-specific popover and Settings screenshots from `docs/images/`, with a concise feature list; the screenshot documentation gate is complete
 
 ## Open manual gates
 
@@ -38,5 +39,4 @@ Codence has been created from the Claudence UI foundation and converted to a Cod
 - verify missing/outdated Codex recovery UI
 - verify Launch at Login actually starts Codence after a logout/login or restart; registration alone is not enough
 - repeat source install, sign-in, refresh, and uninstall on a clean Mac; the public-clone walkthrough reported so far does not establish clean-Mac acceptance
-- capture Codence screenshots before any downloadable release
 - sign, notarize, package, and test the exact public artifact on a clean Mac before offering a binary download

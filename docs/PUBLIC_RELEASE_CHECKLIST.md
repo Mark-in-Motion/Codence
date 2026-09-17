@@ -16,5 +16,5 @@
 - [ ] verify actual automatic launch after a macOS logout/login or restart
 - [ ] validate the browser sign-in flow from a signed-out Codex account
 - [ ] signed and notarized release build
-- [ ] Codence-specific screenshots
+- [x] Codence-specific popover and Settings screenshots added to the README
 - [ ] clean-Mac install, login, launch-at-login, refresh, and uninstall test

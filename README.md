@@ -4,6 +4,24 @@ Codence is an independent macOS menu-bar monitor for ChatGPT-backed Codex usage.
 
 The app stays in the menu bar; it does not open a Dock window. Click its C-shaped menu-bar icon to see usage, refresh, or open Settings.
 
+## Screenshots
+
+<img src="docs/images/codence-popover.png" alt="Codence menu-bar popover showing remaining 5-hour and 7-day allowance, reset countdowns, live status, and a local pace estimate" width="420">
+
+*The menu-bar popover keeps usage and reset timing visible at a glance.*
+
+<img src="docs/images/codence-settings.png" alt="Codence Settings window showing the Codex connection, refresh interval, and Launch at Login control" width="760">
+
+*Native macOS Settings for Codex connection and app preferences.*
+
+## Features
+
+- Shows remaining 5-hour and 7-day allowance and reset countdowns when Codex reports those limits.
+- Distinguishes live usage from saved data and labels its pace estimate as local guidance.
+- Refreshes manually or automatically on a configurable interval.
+- Detects the Codex executable or lets you select it, with Launch at Login and diagnostics in Settings.
+- Stores settings, cached usage, history, and diagnostics locally; Codence does not read or store OpenAI credentials or send usage data to a Codence service.
+
 ## Install from source
 
 There is not yet a signed, notarized downloadable release. These steps build a local copy on your own Mac; do not redistribute that unsigned build as a public download.
