@@ -14,6 +14,8 @@
 
 ## 0.1.0 - 2026-09-16
 
+Published on GitHub as a source-only pre-release on 2026-09-17; no downloadable app or DMG is included.
+
 ### Added
 
 - Independent macOS menu-bar app for monitoring Codex subscription usage.

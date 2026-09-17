@@ -14,6 +14,8 @@ The popover always reserves one status row below Refresh, so loading, success, u
 
 The repository includes a non-overwriting local source installer for people with Xcode. No unsigned app is advertised as a downloadable release. A public binary remains gated on Developer ID signing, notarization, Gatekeeper verification, and clean-Mac acceptance.
 
+The public v0.1.0 release is a source-only pre-release. The current free Apple developer account has an Apple Development identity but no Developer ID Application certificate, so app/DMG distribution remains deferred until Apple Developer Program membership. Launch at Login registration has been verified, but actual launch after login or restart has not.
+
 ### Draw the menu-bar mark as a true template
 
 The earlier full-color PNG had an opaque background; setting `isTemplate` caused macOS to tint that background into a gray block. The menu-bar mark is now drawn with transparent monochrome paths, while the full-color icon remains available for About and the app bundle.

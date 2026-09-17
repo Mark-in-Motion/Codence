@@ -24,7 +24,9 @@ The app stays in the menu bar; it does not open a Dock window. Click its C-shape
 
 ## Install from source
 
-There is not yet a signed, notarized downloadable release. These steps build a local copy on your own Mac; do not redistribute that unsigned build as a public download.
+[v0.1.0](https://github.com/Mark-in-Motion/Codence/releases/tag/v0.1.0) is a **source-only pre-release**. There is no signed, notarized app or DMG download. Install by building a local copy with Xcode; do not redistribute that unsigned build as a public download.
+
+Downloadable binary distribution is deferred until Apple Developer Program membership and clean-Mac acceptance are complete.
 
 Requirements: macOS 13 or newer, the full Xcode app, and a current Codex CLI installation. [OpenAI's Codex CLI guide](https://learn.chatgpt.com/docs/codex/cli) has the current installation and sign-in instructions. Codence requires **Sign in with ChatGPT** in Codex; API-key-only authentication does not provide ChatGPT subscription quota data to this app.
 

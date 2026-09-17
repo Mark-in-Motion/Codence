@@ -8,9 +8,9 @@ Codence searches the app's PATH, common Homebrew paths, `~/.local/bin`, and inst
 
 ## Install Codence
 
-For a local build, use `./scripts/install-local.sh` from the repository root. This requires the full Xcode app and creates `~/Applications/Codence.app`. Launch it with `open "$HOME/Applications/Codence.app"`. The script does not overwrite an existing installation.
+The public `v0.1.0` pre-release is source-only. Use `./scripts/install-local.sh` from the repository root. This requires the full Xcode app and an installed Codex CLI, and creates `~/Applications/Codence.app`. Launch it with `open "$HOME/Applications/Codence.app"`. The script does not overwrite an existing installation.
 
-A friction-free public binary download requires a signed and notarized release; that release has not been produced yet. Do not share the locally built unsigned app as if it were a finished public installer.
+A downloadable app or DMG has not been produced. Developer ID signing and notarization are deferred until Apple Developer Program membership; do not share the locally built unsigned app as if it were a finished public installer.
 
 ## Connect and check usage
 

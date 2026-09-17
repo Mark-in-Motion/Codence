@@ -2,16 +2,19 @@
 
 ## Next
 
-- live macOS acceptance of login, rate-limit reads, and notification updates
-- fresh-checkout source install and menu-bar icon checks in light and dark appearances
+- verify launch after logout/login or restart, signed-out browser login, and menu-bar appearance in light and dark modes
+- finish live quota comparison, refresh-feedback visual checks, and failure/recovery checks
 - add explicit request timeouts and reconnect coverage for stalled app-server calls
 - add a fake-process integration test for JSON-RPC framing and subprocess exit
-- capture Codence-specific screenshots
 - implement notifications only after threshold behavior is approved
+
+## Deferred binary release — requires Apple Developer Program membership
+
+- obtain Developer ID Application signing, notarize a DMG, and verify Gatekeeper
+- test the exact downloadable binary on a clean Mac before distribution
 
 ## Later
 
-- signed and notarized downloadable distribution after clean-Mac acceptance
 - richer daily activity charts
 - compatibility telemetry that never includes credentials or prompts
 - optional API-organization mode as a separately designed product surface
