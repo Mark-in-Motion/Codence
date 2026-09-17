@@ -190,12 +190,14 @@ struct StaticBackoffPolicy: BackoffPolicy {
 @MainActor
 final class StubSyncCoordinator: SyncCoordinating {
     var result: StartupSyncState
+    var onStart: (() -> Void)?
 
     init(result: StartupSyncState) {
         self.result = result
     }
 
     func start() async -> StartupSyncState {
-        result
+        onStart?()
+        return result
     }
 }

@@ -23,7 +23,8 @@ struct SettingsView: View {
     @State private var startupMessage: String?
 
     private let diagnosticsPresenter = DiagnosticsPresenter()
-    private let githubURL = URL(string: "https://github.com/Mark-in-Motion/codence")!
+    private let githubURL = URL(string: "https://github.com/Mark-in-Motion/Codence")!
+    private let uninstallURL = URL(string: "https://github.com/Mark-in-Motion/Codence#uninstall")!
 
     var body: some View {
         NavigationSplitView {
@@ -404,6 +405,9 @@ struct SettingsView: View {
                     Button("GitHub") {
                         openURL(githubURL)
                     }
+                    Link("Uninstall Codence", destination: uninstallURL)
+                        .font(.system(size: 13))
+                        .accessibilityHint("Opens uninstall instructions in the GitHub README")
                     Text("Version \(appVersion)")
                         .font(.system(size: 15, weight: .medium))
                         .foregroundStyle(.secondary)

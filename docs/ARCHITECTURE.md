@@ -10,6 +10,7 @@ Codence is a SwiftUI macOS menu-bar app with typed state, protocol-bound service
 4. `CodexUsageFetchService` verifies ChatGPT authentication, reads rate limits, maps dynamic quota windows, and independently refreshes token activity.
 5. `SyncCoordinator` promotes a valid live snapshot or clearly labeled recovered cache.
 6. Successful live snapshots feed local history and pacing.
+7. `AppBootstrap` publishes a separate typed refresh-feedback state for the menu-bar button and status row. It compares meaningful quota data on successful checks without changing the trust state owned by `SyncCoordinator`.
 
 ## Boundaries
 

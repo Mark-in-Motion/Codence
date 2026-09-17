@@ -19,6 +19,14 @@ The installer refuses to overwrite an existing `Codence.app`. For an update, qui
 
 To work in Xcode instead, open `Codence.xcodeproj`, select the **Codence** scheme and **My Mac**, then Run. `swift test` runs the unit tests; `swift run Codence` is a development-only alternative.
 
+## Uninstall
+
+1. Open the Codence menu-bar popover and choose **Quit**. If **Launch at Login** is enabled, turn it off first in Settings → General → Startup. If Codence is already gone, remove it from macOS System Settings → General → Login Items (under **Open at Login**) if it is still listed.
+2. Move `~/Applications/Codence.app` to the Trash. This removes the app, **not** its saved settings or usage data.
+3. Optional, for a completely clean removal: in Finder, choose Go → Go to Folder, enter `~/Library/Application Support/`, and move the **Codence** folder there to the Trash. This permanently removes Codence's local settings, cached usage, history, and diagnostics when you empty the Trash. Leave it in place if you want to retain that data for a future installation.
+
+These steps do not uninstall the Codex CLI or change your ChatGPT account.
+
 ## Troubleshooting
 
 - **I cannot see the app:** look for the C-shaped icon in the menu bar; macOS may hide it when the menu bar is crowded. Codence is a menu-bar-only app.

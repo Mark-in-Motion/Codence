@@ -26,6 +26,7 @@ let package = Package(
                 "README.md",
                 "Resources/Assets.xcassets",
                 "Resources/Info.plist",
+                "scripts",
                 "docs",
                 "Tests"
             ],

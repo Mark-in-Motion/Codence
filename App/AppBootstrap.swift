@@ -35,9 +35,15 @@ final class AppBootstrap {
     }
 
     func refreshNow() {
+        guard let appState, isRefreshing == false else { return }
+        appState.refreshFeedback = .checking
         Task { @MainActor in
-            await performRefresh(trigger: .manual)
+            await refreshNowAndWait()
         }
+    }
+
+    func refreshNowAndWait() async {
+        await performRefresh(trigger: .manual)
     }
 
     func refreshScheduleDidChange() {
@@ -74,6 +80,9 @@ final class AppBootstrap {
 
         isRefreshing = true
         defer { isRefreshing = false }
+        let previousSnapshot = appState.currentSnapshot
+        let previousStatus = appState.syncStatus
+        appState.refreshFeedback = .checking
 
         scheduledRefreshTask?.cancel()
         scheduledRefreshTask = nil
@@ -91,6 +100,11 @@ final class AppBootstrap {
         appState.applyUsageHistory(history)
         appState.applyPaceMetrics(makePaceMetrics(from: syncState.snapshot, history: history))
         handlePostSync(syncState, trigger: trigger)
+        appState.refreshFeedback = RefreshFeedback.outcome(
+            previousSnapshot: previousSnapshot,
+            previousStatus: previousStatus,
+            result: syncState
+        )
         scheduleRegularRefresh()
     }
 

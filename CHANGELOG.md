@@ -4,6 +4,7 @@
 
 ### Changed
 
+- Keep the popover height stable while Refresh shows progress and reports updated, unchanged, or failed quota checks.
 - Replace the opaque menu-bar image with a transparent monochrome mark.
 - Add a local Release build/install script, GitHub build checks, and clearer public setup and release documentation.
 - Show remaining allowance and reset times in the menu-bar quota views, matching the Codex usage site.

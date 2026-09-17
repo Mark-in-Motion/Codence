@@ -5,10 +5,16 @@
 - [x] explicit live-versus-cached trust state
 - [x] transparent menu-bar template artwork and regression test
 - [x] source build/install instructions and non-overwriting installer
+- [x] manual uninstall guidance in the README, linked from Settings → About
 - [x] automated tests plus unsigned Debug and Release build checks
-- [ ] source-install walkthrough from a fresh checkout on another Mac
-- [ ] publish the repository at the URL linked in Settings, or change that link to the final repository URL
-- [ ] live account acceptance
+- [x] public repository exists at https://github.com/Mark-in-Motion/Codence
+- [x] fresh public clone succeeded (reported 2026-09-17)
+- [x] `install-local.sh` built and installed the Release app from that clone (reported 2026-09-17)
+- [x] installed app launched from Finder (reported 2026-09-17)
+- [x] live Codex account connection and manual refresh succeeded (reported 2026-09-17)
+- [x] Launch at Login registration succeeded (reported 2026-09-17)
+- [ ] verify actual automatic launch after a macOS logout/login or restart
+- [ ] validate the browser sign-in flow from a signed-out Codex account
 - [ ] signed and notarized release build
 - [ ] Codence-specific screenshots
 - [ ] clean-Mac install, login, launch-at-login, refresh, and uninstall test

@@ -2,6 +2,14 @@
 
 ## 2026-09-17
 
+### Keep uninstall manual and documented
+
+Settings → About links to the public README's Uninstall section. Codence does not remove itself or its data. The instructions distinguish removing the app from optionally deleting its Application Support data and explain how to disable Launch at Login.
+
+### Reserve a stable place for refresh feedback
+
+The popover always reserves one status row below Refresh, so loading, success, unchanged, and failure messages do not resize it. A successful check is "unchanged" only when the previous snapshot was live and quota values, reset times, and limit metadata match; fetch timestamps and provenance do not count as new usage data. A recovered cache is a failed refresh, not a successful update.
+
 ### Keep source installation separate from a public binary release
 
 The repository includes a non-overwriting local source installer for people with Xcode. No unsigned app is advertised as a downloadable release. A public binary remains gated on Developer ID signing, notarization, Gatekeeper verification, and clean-Mac acceptance.

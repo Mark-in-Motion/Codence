@@ -4,6 +4,7 @@
 - Keep the menu-bar icon transparent and monochrome so macOS can tint it in light and dark appearances; do not use an opaque app-icon background as a template.
 - Preserve the established Claudence layout density and interaction model.
 - Treat live, cached, missing, and failed data as distinct trust states.
+- Keep refresh feedback in a permanently reserved popover row. Show progress during a check, distinguish changed quota data from an unchanged successful check, and never call a failed cached fallback "updated."
 - Derive quota labels from server-reported durations; never assume every account has five-hour and seven-day windows.
 - Present quota percentages as remaining allowance, matching the Codex usage site. Preserve the server's used percentages in snapshots and pacing calculations.
 - Show relative time until each quota reset in the popover, with matching footer layout for the two main limits. Keep the exact reset date and time available on hover.
@@ -14,6 +15,7 @@
 - Hide pacing when no window of at least one day exists.
 - Keep account statistics in Settings rather than crowding the popover.
 - Show connected status instead of a sign-in action when ChatGPT authentication is valid.
+- Keep the About pane minimal: link to the public README's manual uninstall instructions instead of offering an automated uninstaller. Clearly separate deleting the app from optionally deleting local data.
 - Keep v1 read-only.
 - Never read, copy, log, or persist OpenAI credentials.
 - Never claim Codence is an official OpenAI product.

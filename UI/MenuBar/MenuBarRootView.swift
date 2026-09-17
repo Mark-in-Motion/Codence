@@ -247,9 +247,8 @@ struct MenuBarRootView: View {
 
     private var actionsSection: some View {
         VStack(spacing: 8) {
-            primaryActionButton("Refresh", systemImage: "arrow.clockwise", tint: .blue) {
-                refreshAction()
-            }
+            refreshButton
+            refreshStatusLine
 
             HStack(spacing: 10) {
                 tertiaryActionButton("Settings", systemImage: "gearshape", foreground: .secondary, alignment: .leading) {
@@ -288,25 +287,92 @@ struct MenuBarRootView: View {
         .tint(tint)
     }
 
-    private func primaryActionButton(
-        _ title: String,
-        systemImage: String,
-        tint: Color,
-        action: @escaping () -> Void
-    ) -> some View {
-        Button(action: action) {
-            Label(title, systemImage: systemImage)
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundColor(tint)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 13)
-                .background(
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .fill(tint.opacity(0.14))
-                )
-                .labelStyle(.titleAndIcon)
+    private var refreshButton: some View {
+        Button(action: refreshAction) {
+            HStack(spacing: 8) {
+                if appState.refreshFeedback == .checking {
+                    ProgressView()
+                        .controlSize(.small)
+                        .tint(.blue)
+                        .frame(width: 16, height: 16)
+                } else {
+                    Image(systemName: "arrow.clockwise")
+                        .frame(width: 16, height: 16)
+                }
+                Text(appState.refreshFeedback == .checking ? "Refreshing…" : "Refresh")
+            }
+            .font(.system(size: 15, weight: .semibold))
+            .foregroundColor(.blue)
+            .frame(maxWidth: .infinity)
+            .frame(height: 44)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color.blue.opacity(0.14))
+            )
         }
         .buttonStyle(.plain)
+        .disabled(appState.refreshFeedback == .checking)
+        .accessibilityLabel(appState.refreshFeedback == .checking ? "Refreshing usage" : "Refresh usage")
+    }
+
+    private var refreshStatusLine: some View {
+        HStack(spacing: 6) {
+            Image(systemName: refreshStatusSymbol)
+                .frame(width: 16, height: 16)
+            Text(refreshStatusMessage)
+                .lineLimit(1)
+            Spacer(minLength: 0)
+        }
+        .font(.system(size: 13, weight: .medium))
+        .foregroundColor(refreshStatusTint)
+        .frame(maxWidth: .infinity, minHeight: 20, maxHeight: 20, alignment: .leading)
+        .accessibilityElement(children: .combine)
+    }
+
+    private var refreshStatusMessage: String {
+        switch appState.refreshFeedback {
+        case .idle:
+            if appState.syncStatus == .live { return "Data ready" }
+            return appState.currentSnapshot == nil ? "Waiting for usage data" : "Saved data · ready to check"
+        case .checking:
+            return "Checking for new usage data…"
+        case .updated:
+            return "Data updated · new usage received"
+        case .unchanged:
+            return "Up to date · limits unchanged"
+        case .failed:
+            return appState.currentSnapshot == nil
+                ? "Refresh failed · check Settings"
+                : "Refresh failed · showing saved data"
+        }
+    }
+
+    private var refreshStatusSymbol: String {
+        switch appState.refreshFeedback {
+        case .idle:
+            return "clock"
+        case .unchanged:
+            return "checkmark.circle"
+        case .checking:
+            return "arrow.clockwise"
+        case .updated:
+            return "checkmark.circle.fill"
+        case .failed:
+            return "exclamationmark.triangle.fill"
+        }
+    }
+
+    private var refreshStatusTint: Color {
+        switch appState.refreshFeedback {
+        case .checking:
+            return .blue
+        case .updated:
+            return Color(red: 0.16, green: 0.62, blue: 0.37)
+        case .failed:
+            return .orange
+        case .idle, .unchanged:
+            return .secondary
+        }
     }
 
     private func tertiaryActionButton(

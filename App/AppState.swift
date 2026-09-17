@@ -1,5 +1,44 @@
 import SwiftUI
 
+/// Feedback for a completed quota check. Fetch metadata alone is not a data change.
+enum RefreshFeedback: Equatable {
+    case idle
+    case checking
+    case updated
+    case unchanged
+    case failed
+
+    static func outcome(
+        previousSnapshot: UsageSnapshot?,
+        previousStatus: SyncStatus,
+        result: StartupSyncState
+    ) -> RefreshFeedback {
+        guard result.syncStatus == .live, let latest = result.snapshot else {
+            return .failed
+        }
+        guard previousStatus == .live, let previousSnapshot else {
+            return .updated
+        }
+        return previousSnapshot.hasSameQuotaData(as: latest) ? .unchanged : .updated
+    }
+}
+
+private extension UsageSnapshot {
+    func hasSameQuotaData(as other: UsageSnapshot) -> Bool {
+        sessionUsagePercent == other.sessionUsagePercent &&
+        weeklyUsagePercent == other.weeklyUsagePercent &&
+        modelWeeklyLimits == other.modelWeeklyLimits &&
+        sessionResetsAt == other.sessionResetsAt &&
+        weeklyResetsAt == other.weeklyResetsAt &&
+        shortWindowDurationMinutes == other.shortWindowDurationMinutes &&
+        longWindowDurationMinutes == other.longWindowDurationMinutes &&
+        ordinaryUsageAllowed == other.ordinaryUsageAllowed &&
+        planType == other.planType &&
+        creditBalance == other.creditBalance &&
+        resetCreditCount == other.resetCreditCount
+    }
+}
+
 /// Single app-level state owner for UI-facing sync, auth, and snapshot state.
 @MainActor
 final class AppState: ObservableObject {
@@ -15,6 +54,7 @@ final class AppState: ObservableObject {
     @Published var accountActivity: CodexAccountActivity?
     @Published var isSigningIn: Bool
     @Published var signInMessage: String?
+    @Published var refreshFeedback: RefreshFeedback
 
     init(
         currentSnapshot: UsageSnapshot? = nil,
@@ -28,7 +68,8 @@ final class AppState: ObservableObject {
         usageHistory: [UsageHistoryEntry] = [],
         accountActivity: CodexAccountActivity? = nil,
         isSigningIn: Bool = false,
-        signInMessage: String? = nil
+        signInMessage: String? = nil,
+        refreshFeedback: RefreshFeedback = .idle
     ) {
         self.currentSnapshot = currentSnapshot
         self.syncStatus = syncStatus
@@ -42,6 +83,7 @@ final class AppState: ObservableObject {
         self.accountActivity = accountActivity
         self.isSigningIn = isSigningIn
         self.signInMessage = signInMessage
+        self.refreshFeedback = refreshFeedback
     }
 
     /// Applies the initial launch state before the app has any resolved sync outcome.
@@ -54,6 +96,7 @@ final class AppState: ObservableObject {
         isCodexAvailable = false
         paceMetrics = nil
         usageHistory = []
+        refreshFeedback = .idle
     }
 
     /// Applies the typed startup outcome produced by the coordinator.

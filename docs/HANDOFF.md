@@ -19,22 +19,24 @@ Codence has been created from the Claudence UI foundation and converted to a Cod
 - token activity is optional and cached independently from required rate-limit data
 - the popover preserves the Claudence layout while Settings carries Codex-native account data
 - cached fallback, refresh scheduling, retry, pacing, history, and diagnostics remain
-- 26 Swift tests pass after the popover readability change
-- the unsigned Debug Xcode app build succeeds after the popover readability change
 - the nvm Codex launcher requires its sibling Node directory on PATH when started by the GUI app; this is now injected into the child process environment
 - menu-bar artwork is now transparent monochrome code-drawn template art; the opaque square PNG was removed
 - `./scripts/install-local.sh` builds Release and installs to `~/Applications` without overwriting an existing app; source setup and recovery are documented in the README
 - GitHub CI is configured for Swift tests and unsigned Debug/Release builds
-- 27 Swift tests pass, including menu-bar icon transparency; unsigned Debug and Release Xcode builds pass
+- the Refresh button now shows a spinner while checking, and a fixed-height status row reports updated, unchanged, or failed results without resizing the popover
+- 28 Swift tests pass, including refresh outcome and in-flight-state coverage; unsigned Debug and Release Xcode builds pass
 - the local installer created a runnable arm64 `Codence.app` in a temporary install directory, and a second run correctly refused to overwrite it
+- the public source repository is https://github.com/Mark-in-Motion/Codence; a fresh public clone, Release installation with `install-local.sh`, Finder launch, live account connection and refresh, and Launch at Login registration were reported successful on 2026-09-17
+- Settings → About now links to the README's manual uninstall instructions, which separate app removal from optional local-data removal
 
 ## Open manual gates
 
 - validate the local browser success page in a signed-out account
 - compare remaining percentages and reset times in the rebuilt app with the current Codex usage site
 - visually confirm the revised popover and new menu-bar icon in light and dark appearances on the running Mac
+- visually confirm that manual Refresh animates, settles on the correct result, and keeps the popover height fixed
 - verify missing/outdated Codex recovery UI
-- walk through source installation from a fresh checkout on another Mac
-- create the intended public `Mark-in-Motion/codence` GitHub repository, or update the Settings → About GitHub link if the final URL differs; the current link does not resolve yet
+- verify Launch at Login actually starts Codence after a logout/login or restart; registration alone is not enough
+- repeat source install, sign-in, refresh, and uninstall on a clean Mac; the public-clone walkthrough reported so far does not establish clean-Mac acceptance
 - capture Codence screenshots before any downloadable release
 - sign, notarize, package, and test the exact public artifact on a clean Mac before offering a binary download
